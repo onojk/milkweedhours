@@ -29,7 +29,7 @@ for i in 1 2 3 4 5 6 7 8 9; do
 done
 PREP="scale=16:16"
 GRAPH="[src]nullsink;"
-for i in 1 2 3 4 5 6 7 8 9; do GRAPH+="[$((i+1)):v]settb=AVTB,setpts=PTS-STARTPTS,format=yuv420p[v$i];"; done
+for i in 1 2 3 4 5 6 7 8 9; do GRAPH+="[$((i+1)):v]setpts=PTS-STARTPTS,fps=$FPS,format=yuv420p[v$i];"; done
 prev=v1
 for i in 2 3 4 5 6 7 8 9; do
   off=$(python3 -c "print(round($L*($i-1),3))")
