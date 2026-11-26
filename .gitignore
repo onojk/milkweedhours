@@ -1,0 +1,7 @@
+*.wav
+*.WAV
+*.mp4
+*.mov
+out/
+work/
+assets/cover_*.png
